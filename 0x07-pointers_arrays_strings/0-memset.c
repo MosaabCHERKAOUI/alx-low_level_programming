@@ -1,16 +1,17 @@
 #include "main.h"
+
 /**
- * _memset - fill a block of memory with a specific value
-*/
+ * *_memset - fills memory with a constant byte
+ */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
-	for (i = 0; n > 0; i++)
+	for (i = 0; n > 0; i++, n--)
 	{
 		s[i] = b;
-		n--;
 	}
+
 	return (s);
 }
-
